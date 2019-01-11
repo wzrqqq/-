@@ -1,0 +1,281 @@
+<view class="main">
+    <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+
+    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+         <block wx:for="{{detail}}" wx:for-index wx:key="idx">
+            <view id="{{item.id}}" class="cate-box">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.cate}}</text>
+                </view>
+                <view class="product">
+                    <view class="product-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="val">
+                        <navigator url="../list/list">
+                            <image src="{{val.thumb}}"></image>
+                            <view class="classname"><text>{{val.name}}</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block> 
+        <block>
+            <view id="guowei" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/w1.jpg"></image>
+                </view>
+                <view class="cate-title">
+                    <text>川味</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w2.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w3.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w4.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w5.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w6.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w7.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/w8.jpg"></image>
+                            <view class="classname"><text>肉鸡</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+                <block>
+            <view id="shucai" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/a1.jpg"></image>
+                </view>
+                <view class="cate-title">
+                    <text>冰城</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a2.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a3.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a4.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a5.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a6.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/a7.jpg"></image>
+                            <view class="classname"><text>路子</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block>
+            <view id="chaohuo" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/q1.jpg"></image>
+                </view>
+                <view class="cate-title">
+                    <text>山城</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q2.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q3.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q4.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q5.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q6.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/q7.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block>
+            <view id="dianxin" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/e1.jpg"></image>
+                </view>
+                <view class="cate-title">
+                    <text>火城</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e2.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e3.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e4.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e5.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e6.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/e7.jpg"></image>
+                            <view class="classname"><text>褥子</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block>
+            <view id="danfan" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.jpg"></image>
+                </view>
+                <view class="cate-title">
+                    <text>校园的你</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c2.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c3.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c4.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c5.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c6.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c7.jpg"></image>
+                            <view class="classname"><text>肉狗</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+
+</view>
